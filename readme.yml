@@ -1,0 +1,49 @@
+readme:
+  name: Buto-Plugin-OpenaiUi
+  description: |
+    UI to make API call via plugin openai/api_v1.
+  item:
+    -
+      name: Settings
+      description: |
+        Add this to handle form request.
+        ````
+        plugin_modules:
+          openai:
+            plugin: openai/ui
+        ````
+    -
+      name: Usage
+      description: |
+        - Add widget on a page.
+        - Add to theme settings file.
+        - Se plugin openai/api_v1 how to set up api key.
+    -
+      name: Pages
+      item:
+        -
+          name: page_send
+          description: |
+            Page to capture form.
+    -
+      name: Widgets
+      item:
+        -
+          name: widget_form
+          description: |
+            Embed a form on a page.
+            ````
+            type: widget
+            data:
+              plugin: openai/ui
+              method: form
+            ````
+
+    -
+      name: Methods
+      item:
+        -
+          name: form_capture
+          description: |
+            Handle form capture.
+            Make API call and put content in div element.

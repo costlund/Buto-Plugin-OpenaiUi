@@ -1,0 +1,27 @@
+url: /openai/send
+ajax: true
+submit_value: Send
+id: frm_openai
+autocomplete: off
+items:
+  content:
+    type: varchar
+    label: Content
+    mandatory: true
+capture:
+  plugin: openai/ui
+  method: form_capture
+elements_after:
+  -
+    type: div
+    attribute: 
+      class: alert alert-success
+    innerHTML: 
+      -
+        type: div
+        attribute:
+          id: openai_content
+          style:
+            width: '100%'
+            height: 400px
+        innerHTML: 
