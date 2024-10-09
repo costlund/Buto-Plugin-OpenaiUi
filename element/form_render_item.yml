@@ -1,0 +1,59 @@
+type: div
+attribute:
+  class: alert alert-secondary
+innerHTML:
+  -
+    type: div
+    innerHTML:
+      - 
+        type: strong
+        attribute:
+          class: content-colon
+        innerHTML: Time
+      - 
+        type: span
+        innerHTML: rs:datetime
+  -
+    type: div
+    innerHTML:
+      - 
+        type: strong
+        attribute:
+          class: content-colon
+        innerHTML: Question
+      - 
+        type: span
+        innerHTML: rs:request/messages/1/content
+  -
+    type: div
+    innerHTML:
+      - 
+        type: strong
+        attribute:
+          class: content-colon
+        innerHTML: Answer
+      - 
+        type: span
+        innerHTML: rs:response/choices/0/message/content
+  -
+    type: div
+    innerHTML:
+      - 
+        type: strong
+        attribute:
+          class: content-colon
+        innerHTML: Total tokens
+      - 
+        type: span
+        innerHTML: rs:response/usage/total_tokens
+  -
+    type: div
+    innerHTML:
+      - 
+        type: strong
+        attribute:
+          class: content-colon
+        innerHTML: Max tokens
+      - 
+        type: span
+        innerHTML: data:max_tokens

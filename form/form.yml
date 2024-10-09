@@ -8,6 +8,9 @@ items:
     type: varchar
     label: Content
     mandatory: true
+render:
+  plugin: openai/ui
+  method: form_render
 capture:
   plugin: openai/ui
   method: form_capture
@@ -20,8 +23,8 @@ elements_after:
       -
         type: div
         attribute:
-          id: openai_content
+          id: openai_log
           style:
             width: '100%'
-            height: 400px
-        innerHTML: 
+            min-height: 400px
+        innerHTML: rs:log

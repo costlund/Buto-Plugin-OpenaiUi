@@ -4,3 +4,77 @@
     plugin: 'form/form_v1'
     method: render
     data: yml:/plugin/openai/ui/form/form.yml
+-
+  type: script
+  innerHTML: |
+    function openai_ui_form_capture(data){
+      /**
+       *
+       */
+      var div = document.createElement('div');
+      div.className = 'alert alert-secondary';
+      /**
+       *
+       */
+      var div_datetime = document.createElement('div');
+      var div_datetime_strong = document.createElement('strong');
+      div_datetime_strong.className = 'content-colon';
+      div_datetime_strong.innerHTML = 'Time';
+      var div_datetime_span = document.createElement('span');
+      div_datetime_span.innerHTML = ' '+data.datetime;
+      div_datetime.appendChild(div_datetime_strong);
+      div_datetime.appendChild(div_datetime_span);
+      div.appendChild(div_datetime);
+      /**
+       *
+       */
+      var div_request = document.createElement('div');
+      var div_request_strong = document.createElement('strong');
+      div_request_strong.className = 'content-colon';
+      div_request_strong.innerHTML = 'Question';
+      var div_request_span = document.createElement('span');
+      div_request_span.innerHTML = ' '+data.request;
+      div_request.appendChild(div_request_strong);
+      div_request.appendChild(div_request_span);
+      div.appendChild(div_request);
+      /**
+       *
+       */
+      var div_response = document.createElement('div');
+      var div_response_strong = document.createElement('strong');
+      div_response_strong.className = 'content-colon';
+      div_response_strong.innerHTML = 'Answer';
+      var div_response_span = document.createElement('span');
+      div_response_span.innerHTML = ' '+data.response;
+      div_response.appendChild(div_response_strong);
+      div_response.appendChild(div_response_span);
+      div.appendChild(div_response);
+      /**
+       *
+       */
+      var div_total_tokens = document.createElement('div');
+      var div_total_tokens_strong = document.createElement('strong');
+      div_total_tokens_strong.className = 'content-colon';
+      div_total_tokens_strong.innerHTML = 'Total tokens';
+      var div_total_tokens_span = document.createElement('span');
+      div_total_tokens_span.innerHTML = ' '+data.total_tokens;
+      div_total_tokens.appendChild(div_total_tokens_strong);
+      div_total_tokens.appendChild(div_total_tokens_span);
+      div.appendChild(div_total_tokens);
+      /**
+       *
+       */
+      var div_max_tokens = document.createElement('div');
+      var div_max_tokens_strong = document.createElement('strong');
+      div_max_tokens_strong.className = 'content-colon';
+      div_max_tokens_strong.innerHTML = 'Max tokens';
+      var div_max_tokens_span = document.createElement('span');
+      div_max_tokens_span.innerHTML = ' '+data.max_tokens;
+      div_max_tokens.appendChild(div_max_tokens_strong);
+      div_max_tokens.appendChild(div_max_tokens_span);
+      div.appendChild(div_max_tokens);
+      /**
+       *
+       */
+      document.getElementById('openai_log').insertAdjacentElement('afterbegin', div);
+    }
