@@ -44,6 +44,14 @@ class PluginOpenaiUi{
       $yml->set('log', array_reverse($yml->get('log')));
       foreach($yml->get('log') as $k => $v){
         $i = new PluginWfArray($v);
+        /**
+         * Replace in content
+         */
+        $i->set('response/choices/0/message/content', str_replace(array("\r", "\n"), '<br>', $i->get('response/choices/0/message/content')));
+        $i->set('response/choices/0/message/content', str_replace(array("'"), '', $i->get('response/choices/0/message/content')));
+        /**
+         * 
+         */
         $item = new PluginWfYml(__DIR__.'/element/form_render_item.yml');
         $item->setByTag($i->get());
         $item->setByTag($data->get(), 'data');

@@ -1,5 +1,9 @@
-version: 1.1.0
+version: 1.1.1
 history:
+  1.1.1:
+    date: '2024-10-17'
+    title: 'Content'
+    description: 'Replace in content in log list.'
   1.1.0:
     date: '2024-10-09'
     title: 'Log'
