@@ -1,10 +1,13 @@
 # Buto-Plugin-OpenaiUi
 
-<p>UI to make API call via plugin openai/api_v1.</p>
+<p>UI to make API call via plugin openai/api_v1.
+User must have system role webmaster.</p>
 
 <a name="key_0"></a>
 
 ## Settings
+
+
 
 <p>Add this to handle form request.</p>
 <pre><code>plugin_modules:
@@ -14,6 +17,8 @@
 <a name="key_1"></a>
 
 ## Usage
+
+
 
 <ul>
 <li>Add widget on a page.</li>
@@ -27,11 +32,16 @@
 
 
 
+
+
 <a name="key_2_0"></a>
 
 ### page_send
 
-<p>Page to capture form.</p>
+
+
+<p>Page to capture form.
+System role webmaster is required.</p>
 
 <a name="key_3"></a>
 
@@ -39,15 +49,20 @@
 
 
 
+
+
 <a name="key_3_0"></a>
 
 ### widget_form
+
+
 
 <p>Embed a form on a page.</p>
 <pre><code>type: widget
 data:
   plugin: openai/ui
   method: form</code></pre>
+<p>System role webmaster is required.</p>
 
 <a name="key_4"></a>
 
@@ -55,9 +70,13 @@ data:
 
 
 
+
+
 <a name="key_4_0"></a>
 
 ### form_capture
+
+
 
 <p>Handle form capture.
 Make API call and put content in div element.</p>

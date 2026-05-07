@@ -1,6 +1,18 @@
 -
   type: widget
+  settings:
+    role:
+      item:
+        - webmaster
   data:
     plugin: 'form/form_v1'
     method: capture
     data: yml:/plugin/openai/ui/form/form.yml
+-
+  type: text
+  settings:
+    role:
+      allow: false
+      item:
+        - webmaster
+  innerHTML: User must have system role webmaster!

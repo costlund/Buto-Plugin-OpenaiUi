@@ -1,11 +1,27 @@
 -
+  type: text
+  settings:
+    role:
+      allow: false
+      item:
+        - webmaster
+  innerHTML: User must have system role webmaster!
+-
   type: widget
+  settings:
+    role:
+      item:
+        - webmaster
   data:
     plugin: 'form/form_v1'
     method: render
     data: yml:/plugin/openai/ui/form/form.yml
 -
   type: script
+  settings:
+    role:
+      item:
+        - webmaster
   innerHTML: |
     function openai_ui_form_capture(data){
       /**
