@@ -1,5 +1,9 @@
-version: 1.2.0
+version: 1.2.1
 history:
+  1.2.1:
+    date: '2026-05-13'
+    title: 'System role'
+    description: 'User must have system role webadmin for testing.'
   1.2.0:
     date: '2026-05-06'
     title: 'System role'

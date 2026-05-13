@@ -2,7 +2,7 @@ readme:
   name: Buto-Plugin-OpenaiUi
   description: |
     UI to make API call via plugin openai/api_v1.
-    User must have system role webmaster.
+    User must have system role webmaster, webadmin.
   item:
     -
       name: Settings
@@ -26,7 +26,7 @@ readme:
           name: page_send
           description: |
             Page to capture form.
-            System role webmaster is required.
+            System role webmaster, webadmin is required.
     -
       name: Widgets
       item:
@@ -40,7 +40,7 @@ readme:
               plugin: openai/ui
               method: form
             ````
-            System role webmaster is required.
+            System role webmaster, webadmin is required.
     -
       name: Methods
       item:

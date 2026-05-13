@@ -5,13 +5,15 @@
       allow: false
       item:
         - webmaster
-  innerHTML: User must have system role webmaster!
+        - webadmin
+  innerHTML: User must have system role webmaster, webadmin!
 -
   type: widget
   settings:
     role:
       item:
         - webmaster
+        - webadmin
   data:
     plugin: 'form/form_v1'
     method: render
@@ -22,6 +24,7 @@
     role:
       item:
         - webmaster
+        - webadmin
   innerHTML: |
     function openai_ui_form_capture(data){
       /**

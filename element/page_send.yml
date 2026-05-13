@@ -4,6 +4,7 @@
     role:
       item:
         - webmaster
+        - webadmin
   data:
     plugin: 'form/form_v1'
     method: capture
@@ -15,4 +16,5 @@
       allow: false
       item:
         - webmaster
-  innerHTML: User must have system role webmaster!
+        - webadmin
+  innerHTML: User must have system role webmaster, webadmin!
